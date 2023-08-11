@@ -8,17 +8,25 @@ const requestListener = async (req, res) => {
 
   if (url === "/index.html") {
     try {
-      const data = await fs.readFile("./view/index.html", "utf-8");
+      const data = await fs.readFile("./views/MainPage/index.html", "utf-8");
       res.statusCode = 200;
       res.end(data);
     } catch (error) {
       res.statusCode = 404;
       res.end(error.message);
     }
+  } else if (url === "/style.css") {
+    try {
+      const data = await fs.readFile("./views/style.css", "utf-8");
+      res.statusCode = 200;
+      res.end(data);
+    } catch (error) {
+      res.end(error.message);
+    }
   } else {
     res.statusCode = 404;
-    // TODO: NotFound
-    res.end();
+    const data = await fs.readFile("./views/NotFoundPage/index.html", "utf-8");
+    res.end(data);
   }
 };
 
@@ -27,3 +35,12 @@ const server = http.createServer(requestListener);
 server.listen(PORT);
 
 // localhost:5000
+
+
+/*
+
+ДЗ.
+Можете спробувати зробити так, щоб користувач робив запит на різні стильові файли
+(в залежності, на якій він знаходить)
+
+*/
