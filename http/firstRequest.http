@@ -1,1 +1,1 @@
-DELETE http://localhost:5000/myurl/REST-CLIENT HTTP/1.1
+DELETE http://localhost:5000/index.html HTTP/1.1
