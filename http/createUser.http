@@ -4,5 +4,7 @@ Content-Type: application/json
 {
     "firstName": "John",
     "lastName": "Doe",
-    "age": 45
+    "email": "johndoe@gmail.com",
+    "password": "qwerty",
+    "isSubscribed": true
 }
