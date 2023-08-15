@@ -7,7 +7,7 @@ class User {
         this.email = email;
         this.password = password;
         this.isSubscribed = isSubscribed;
-        this.createddAt = new Date();
+        this.createdAt = new Date();
         this.id = db.size + 1;
     }
 

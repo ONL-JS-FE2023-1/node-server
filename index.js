@@ -14,6 +14,7 @@ const UserController = require('./controllers/UserController');
 
 // спочатку ви описуєте роути сервера
 app.post('/user', bodyParser, validateUser, UserController.createUser);
+app.get('/users', UserController.getAllUsers);
 
 // кожен учасник естафети - middleware (мідлвейр, мідлвар)
 
@@ -21,15 +22,3 @@ app.post('/user', bodyParser, validateUser, UserController.createUser);
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`)
 })
-
-/*
-
-Задача: реєстрацію юзера
-
-1. Прийняти запит на певний route (endpoint, ручка, маршрут...)
-2. JSON->JS
-3. Перевірити (валідувати) дані
-4. Зберегти ці дані (юзера)
-5. Надіслати користувачу відповідь
-
-*/
