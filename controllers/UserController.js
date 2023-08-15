@@ -13,3 +13,7 @@ module.exports.getAllUsers = (req, res) => {
     res.statusCode = 200;
     res.send(users);
 }
+
+module.exports.getOneUser = (req, res) => {
+    console.log(req.query)
+}

@@ -15,6 +15,7 @@ const UserController = require('./controllers/UserController');
 // спочатку ви описуєте роути сервера
 app.post('/user', bodyParser, validateUser, UserController.createUser);
 app.get('/users', UserController.getAllUsers);
+app.get('/user', UserController.getOneUser);
 
 // кожен учасник естафети - middleware (мідлвейр, мідлвар)
 
