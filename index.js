@@ -17,6 +17,7 @@ app.post('/user', bodyParser, validateUser, UserController.createUser);
 app.get('/users', UserController.getAllUsers);
 app.get('/user/:userId', UserController.getOneUser);
 app.delete('/user/:userId', UserController.deleteOneUser);
+app.put('/user/:userId', bodyParser, UserController.updateUser);
 
 // кожен учасник естафети - middleware (мідлвейр, мідлвар)
 
